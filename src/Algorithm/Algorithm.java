@@ -236,7 +236,7 @@ public class Algorithm {
         swap(a, pivotIndex, end);
         int pivot = a[end];
         int i = start - 1;
-        //不变式： (stat,i) < pivot <= (i+1,j-1)
+        //不变式： a[stat,i] < pivot <= a[i+1,j-1]
         for (int j = start; j < end; j++) {
             if (a[j] < pivot) {
                 i++;
